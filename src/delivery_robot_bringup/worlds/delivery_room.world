@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <world name="delivery_room">
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <physics name="default_physics" type="ode">
+      <max_step_size>0.001</max_step_size>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+
+    <model name="room_walls">
+      <static>true</static>
+      <link name="walls">
+        <collision name="north_collision">
+          <pose>0 3 0.6 0 0 0</pose>
+          <geometry><box><size>6.15 0.15 1.2</size></box></geometry>
+        </collision>
+        <visual name="north_visual">
+          <pose>0 3 0.6 0 0 0</pose>
+          <geometry><box><size>6.15 0.15 1.2</size></box></geometry>
+        </visual>
+
+        <collision name="south_collision">
+          <pose>0 -3 0.6 0 0 0</pose>
+          <geometry><box><size>6.15 0.15 1.2</size></box></geometry>
+        </collision>
+        <visual name="south_visual">
+          <pose>0 -3 0.6 0 0 0</pose>
+          <geometry><box><size>6.15 0.15 1.2</size></box></geometry>
+        </visual>
+
+        <collision name="west_collision">
+          <pose>-3 0 0.6 0 0 0</pose>
+          <geometry><box><size>0.15 6.15 1.2</size></box></geometry>
+        </collision>
+        <visual name="west_visual">
+          <pose>-3 0 0.6 0 0 0</pose>
+          <geometry><box><size>0.15 6.15 1.2</size></box></geometry>
+        </visual>
+
+        <collision name="east_collision">
+          <pose>3 0 0.6 0 0 0</pose>
+          <geometry><box><size>0.15 6.15 1.2</size></box></geometry>
+        </collision>
+        <visual name="east_visual">
+          <pose>3 0 0.6 0 0 0</pose>
+          <geometry><box><size>0.15 6.15 1.2</size></box></geometry>
+        </visual>
+
+        <!-- 中间隔墙左右两段之间留出 1.2 m 通道 -->
+        <collision name="partition_left_collision">
+          <pose>-1.8 0 0.6 0 0 0</pose>
+          <geometry><box><size>2.4 0.15 1.2</size></box></geometry>
+        </collision>
+        <visual name="partition_left_visual">
+          <pose>-1.8 0 0.6 0 0 0</pose>
+          <geometry><box><size>2.4 0.15 1.2</size></box></geometry>
+        </visual>
+
+        <collision name="partition_right_collision">
+          <pose>1.8 0 0.6 0 0 0</pose>
+          <geometry><box><size>2.4 0.15 1.2</size></box></geometry>
+        </collision>
+        <visual name="partition_right_visual">
+          <pose>1.8 0 0.6 0 0 0</pose>
+          <geometry><box><size>2.4 0.15 1.2</size></box></geometry>
+        </visual>
+      </link>
+    </model>
+
+    <model name="obstacle_south">
+      <static>true</static>
+      <pose>-1.5 -1.2 0.35 0 0 0</pose>
+      <link name="box">
+        <collision name="collision">
+          <geometry><box><size>0.6 0.8 0.7</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>0.6 0.8 0.7</size></box></geometry>
+          <material>
+            <ambient>0.8 0.4 0.1 1</ambient>
+            <diffuse>0.9 0.5 0.1 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="obstacle_north">
+      <static>true</static>
+      <pose>1.4 1.4 0.35 0 0 0</pose>
+      <link name="box">
+        <collision name="collision">
+          <geometry><box><size>0.8 0.6 0.7</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>0.8 0.6 0.7</size></box></geometry>
+          <material>
+            <ambient>0.1 0.5 0.8 1</ambient>
+            <diffuse>0.1 0.6 0.9 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="obstacle_north_west">
+      <static>true</static>
+      <pose>-1.6 1.5 0.25 0 0 0</pose>
+      <link name="box">
+        <collision name="collision">
+          <geometry><box><size>0.5 0.5 0.5</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>0.5 0.5 0.5</size></box></geometry>
+          <material>
+            <ambient>0.2 0.7 0.2 1</ambient>
+            <diffuse>0.3 0.8 0.3 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+  </world>
+</sdf>
