@@ -1,0 +1,13 @@
+# Both poses must be expressed in the map frame.
+geometry_msgs/PoseStamped pickup_pose
+geometry_msgs/PoseStamped dropoff_pose
+---
+bool success
+# Empty on success or cancellation before/between legs; otherwise validation,
+# pickup, dropoff, or internal.
+string failed_stage
+string message
+---
+# pickup or dropoff when the corresponding navigation leg begins.
+string stage
+string message
