@@ -57,3 +57,7 @@ For operator-run success, cancellation, and timeout checks, use the separate `de
 仓库外的 `~/mobile_robot_delivery_acceptance_logs/` 是**本机证据索引**，不是 GitHub 可直接打开的链接。其中 C8 原片为 `C8_2026-10-28/run_001/raw_capture.webm`（92.170 秒），成片为同目录 `C8_temporary_obstacle_two_stop_demo_final.webm`（110.200 秒）；两者均不随 GitHub 仓库备份。C5/C6 的 bag、离线报告、临时 world、运行日志同样留在仓库外。GitHub 备份覆盖仓库内源码、配置、地图和文档。
 
 已知风险仍需后续排查：早期超时运行约 `0.15 rad` 的持续同向 odom 偏航来源未查明；C6 运行删除箱体后，全局 costmap 原箱体区域的高代价持续到 bag 结束。任务 action 返回不表示车体立即静止，单次激光扫描也不代表看见箱体全部边界。
+
+## V0.3 障碍移除与导航恢复
+
+V0.3 在临时箱体的固定起终点规划场景中，已完成两次独立运行的地图标记、绕行、移除和恢复验收；阶段计 **100/100**，不改变 V0.1、V0.2 各 100/100 的历史结论。验收标签为**按已记录操作者操作，无主动清图的自动恢复**，但无法排除其他客户端调用清图服务；历史 C6 残留和早期 odom 偏航仍未解。固定判据、各轮差异、操作方法与原始证据索引见 [V0.3 交付页](docs/V0.3_DELIVERY.md)和[项目状态](docs/PROJECT_STATUS.md)。V0.3 原始 bag、JSONL 与运行日志在仓库外，不随本仓库 GitHub 备份；仓库内保存审计、脚本和离线图表。

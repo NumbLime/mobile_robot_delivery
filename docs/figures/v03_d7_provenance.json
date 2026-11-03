@@ -1,0 +1,27 @@
+{
+  "kind": "offline rendering, not Gazebo/RViz footage",
+  "run_dir": "/home/numblime/mobile_robot_delivery_acceptance_logs/D5_2026-11-03_recovery_run_001",
+  "bag": "/home/numblime/mobile_robot_delivery_acceptance_logs/D5_2026-11-03_recovery_run_001/bag/recovery/recovery_0.db3",
+  "bag_sha256": "6bd31b7467d442c1d1e46735ababd65d07e22476a7cd9e357dd161b7a5f282f8",
+  "plan_jsonl_sha256": {
+    "plans_baseline.jsonl": "44c7a6b620470d7004f4fec21ef1c7c56435009e059c6ed7bc7d5b3766c5d0b5",
+    "plans_with_box.jsonl": "cd477c373b50db9d61b674e57f20c9abbc79bdc20294ec4c05207c0845de870c",
+    "plans_predelete.jsonl": "dff7647a335064b4d3b8d183c2541ea2ab9074b085aee883b871c95f3d2479e4",
+    "plans_continuous.jsonl": "6eb21d3a782640a86afbcbb38991b1e10e38d3e2824181839d76a4ef88f9e064"
+  },
+  "t0_sim": 2460.978,
+  "deadline_sim": 2520.978,
+  "delete_call_sim_approx": [
+    2449.2,
+    2453.1
+  ],
+  "target_cells": 179,
+  "bag_plan_count": 64,
+  "third_clear_map_sim": 2464.8,
+  "recovery_plan_sim": 2466.2,
+  "map_snapshot_sim": [
+    988.2,
+    2014.0,
+    2466.3
+  ]
+}
