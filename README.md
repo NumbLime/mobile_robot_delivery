@@ -9,6 +9,8 @@ ROS 2 Humble 与 Gazebo Classic 中的室内差速配送机器人项目。
 - `delivery_task_interfaces`: 取货点与送达点任务的 ROS action 接口。
 - `delivery_task_manager`: 顺序调用 Nav2 的取货、送达任务节点；两站成功、分段取消和超时已在 Gazebo/Nav2 中运行验收，独立停车证据及限制见项目状态文档。
 
+项目展示入口：[系统架构图](docs/SYSTEM_ARCHITECTURE.md)、[限定场景测试报告](docs/TEST_REPORT.md)、[个人贡献与限制说明](docs/CONTRIBUTION_AND_LIMITS.md)。三份文档区分现行配置、既有运行证据和贡献归属。
+
 ## Build
 
 ```bash
