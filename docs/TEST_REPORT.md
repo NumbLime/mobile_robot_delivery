@@ -10,9 +10,9 @@
 
 ## 演示与原始证据
 
-- C8 原片 `~/mobile_robot_delivery_acceptance_logs/C8_2026-10-28/run_001/raw_capture.webm`（约 92.170 秒）及同目录成片 `C8_temporary_obstacle_two_stop_demo_final.webm`（约 110.200 秒），与 `C8_DEMO_VALIDATION.md`、同轮 bag 和日志一起保存在**仓库外本机目录**。成片片头片尾标明编辑说明。既有[状态记录](PROJECT_STATUS.md)与本机报告曾核对画面及证据；本页编写时未重新逐帧验收。尚无分享地址，**面试时按需提供**。
+- [V0.1 与 V0.2 两段展示成片](../media/README.md)收录在仓库；其原片、同期 bag、日志和 C8 `C8_DEMO_VALIDATION.md` 保存在 `~/mobile_robot_delivery_acceptance_logs/` 本机目录。C8 成片片头片尾标明编辑说明；既有[状态记录](PROJECT_STATUS.md)与本机报告曾核对画面及同期证据。本次入库未重新逐帧验收。
 - V0.3 证据图表与来源见 [D7 展示](V0.3_D7_EVIDENCE_PRESENTATION.md)；V0.3 没有新增现场视频。
-- 仓库外路径仅是本机证据索引，不是 GitHub 链接。仓库内报告便于阅读，但不能取代原始 bag、日志和视频；GitHub 仓库不会自动备份这些外部文件。
+- 仓库外路径仅是本机原始证据索引，不是 GitHub 链接。仓库内成片及报告便于展示，但不能取代原始 bag、日志和原片；GitHub 仓库不会自动备份这些外部文件。
 
 ## 本次修订的验证级别
 

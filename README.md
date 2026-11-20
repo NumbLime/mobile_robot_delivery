@@ -52,11 +52,18 @@ This launch starts only the task server. Its `leg_timeout_sec` argument defaults
 
 For operator-run success, cancellation, and timeout checks, use the separate `delivery_acceptance_client` executable and follow [docs/DELIVERY_ACCEPTANCE.md](docs/DELIVERY_ACCEPTANCE.md). The client is a test tool; it does not start Gazebo/Nav2 or change the task server's navigation logic.
 
+## 演示视频
+
+- [V0.1 两站配送成片](media/B7_two_stop_delivery_demo_final_2026-10-21.webm)：约 63 秒，展示取货与送达顺序。
+- [V0.2 临时障碍配送成片](media/C8_temporary_obstacle_two_stop_demo_final.webm)：约 110 秒，展示箱体出现、扫描/代价/路径变化和两站结果。
+
+[视频来源、校验值与限制](media/README.md)说明成片和原片的区别。V0.3 的障碍移除恢复为无运动固定规划对照，仅有[离线图表](docs/V0.3_D7_EVIDENCE_PRESENTATION.md)，没有新增现场录像。
+
 ## V0.2 临时障碍演示
 
 当前导航配置在全局 costmap 中依次使用静态层、订阅 `/scan` 的障碍层和膨胀层（半径 `0.55 m`）；局部 costmap 仍使用自己的 `/scan` 障碍层和 `0.40 m` 膨胀半径。V0.2 在固定起终点规划对照中观察到箱体加入后路径南绕；单次配送中又核对了扫描、两张代价地图、全局路径和实际运动时序。独立的一轮 Gazebo 模型姿态与箱体接触记录支持该轮两站无碰撞送达。具体证据和适用边界见 [项目状态](docs/PROJECT_STATUS.md)。
 
-仓库外的 `~/mobile_robot_delivery_acceptance_logs/` 是**本机证据索引**，不是 GitHub 可直接打开的链接。其中 C8 原片为 `C8_2026-10-28/run_001/raw_capture.webm`（92.170 秒），成片为同目录 `C8_temporary_obstacle_two_stop_demo_final.webm`（110.200 秒）；两者均不随 GitHub 仓库备份。C5/C6 的 bag、离线报告、临时 world、运行日志同样留在仓库外。GitHub 备份覆盖仓库内源码、配置、地图和文档。
+仓库外的 `~/mobile_robot_delivery_acceptance_logs/` 是**本机原始证据索引**，不是 GitHub 可直接打开的链接。其中 C8 原片为 `C8_2026-10-28/run_001/raw_capture.webm`（92.170 秒）；两段展示成片现收录于 [`media/`](media/README.md)。C5/C6 的 bag、离线报告、临时 world、运行日志仍在仓库外，未随本仓库备份。
 
 已知风险仍需后续排查：早期超时运行约 `0.15 rad` 的持续同向 odom 偏航来源未查明；C6 运行删除箱体后，全局 costmap 原箱体区域的高代价持续到 bag 结束。任务 action 返回不表示车体立即静止，单次激光扫描也不代表看见箱体全部边界。
 
